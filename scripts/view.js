@@ -104,7 +104,7 @@ export default class View {
             el.innerHTML = prizes[label].wins;
         });
 
-        const moneySpend = count * 2.3;
+        const moneySpend = count * 2.2;
         const profit = moneyWon - moneySpend;
 
         const totalTimes = this.totalTimes === 0
@@ -124,6 +124,12 @@ export default class View {
         const color = profit > 0 ? "green" : "red";
 
         this.profit.style.color = color;
+    }
+
+    disableInputs(){
+
+        this.betsPerWeek.setAttribute("disabled", true);
+        this.years.setAttribute("disabled", true);
     }
 
 }

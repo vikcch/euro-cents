@@ -47,6 +47,8 @@ export default class Controller {
      */
     handlerKeys_Click = (event) => {
 
+        this.view.disableInputs();
+
         const times = this.view.totalTimes;
 
         let count = 1;
